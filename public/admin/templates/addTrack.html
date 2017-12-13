@@ -1,0 +1,56 @@
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            <small>Add Track</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="/admin/dashboard#/userList"><i class="fa fa-dashboard"></i> Track</a></li>
+            <li class="active">Add Track</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-md-11">
+                <!-- general form elements -->
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Add Track</h3>
+                    </div>
+                        <!--div class="form-group">
+                        <div class="alert alert-success" ng-show="message">
+                            <strong ng-bind="message" ></strong> 
+                        </div>
+                    </div-->
+                    <form method="post"  ng-submit="addPost(post)">
+                        <div class="box-body">
+                            <div class='col-lg-8'>
+                                <div class='form-group'>
+                                    <input type='text' placeholder='Track Title' ng-model='post.title' required="" name='title' class='form-control'>
+                                </div>
+                            </div>
+                            <div class='col-lg-8'>
+                                <div class='form-group'>
+								
+								
+								<!--input type='text' placeholder='Category' ng-model='post.slug' required="" name='slug' class='form-control'-->
+                                 <select name="select Genre" ng-model="post.gener" style="width:100%" >
+                                     <option ng-repeat="cat in generList" value="{{cat.name}}" >{{cat.name}}</option>
+								 </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class='form-group'>
+                                    <input type="text" required=""   ng-model='post.rating' name="rating" placeholder='Track Rating'>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <input type="submit" value="Submit" name="submit" class="btn btn-success pull-right">                               
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

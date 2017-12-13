@@ -8,7 +8,6 @@ var User = new mongoose.Schema({
 	},
 	firstname:{type:String, required:'{PATH} is required!'},
 	lastname:{type:String, required:'{PATH} is required!'},
-//	password:{type:String, required:'{PATH} is required!'},
 	dob:{type:String,required:'{PATH} is required!'},
 	role:{type:String,required:'{PATH} is required!'},
 	status:{type:Boolean,required:'{PATH} is required!'},

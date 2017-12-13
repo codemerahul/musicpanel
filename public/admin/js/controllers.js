@@ -48,6 +48,10 @@ adminApp.controller('AllUsersCtrl', function($scope, userList,Users,$location) {
 * Add user
 */
 adminApp.controller('addUserCtrl',function($scope,Users){
+
+
+
+    
     $scope.user = {}
     $scope.addUser = function(){
         console.log(this.user);
@@ -120,9 +124,7 @@ adminApp.controller('addGenerCtrl', function($scope,Gener) {
         console.log(this.post);
         $scope.newPost = {};
         $scope.newPost.name = this.post.name;
-        // $scope.newPost.slug = this.post.slug;
-        // $scope.newPost.description = this.post.description;
-        Gener.add($scope.newPost).then(function(res) {
+         Gener.add($scope.newPost).then(function(res) {
             console.log(res);
             
         });
@@ -256,7 +258,7 @@ adminApp.controller('editTrackCtrl', function($scope, Track, $stateParams) {
 });
 
 adminApp.controller('addTrackCtrl', function($scope,Track) {
-    $scope.post={};
+      $scope.post={};
     $scope.generList={};
 
     Track.get_gen().then(function(res) {
@@ -277,7 +279,7 @@ adminApp.controller('addTrackCtrl', function($scope,Track) {
         console.log($scope.newPost);
         Track.add($scope.newPost).then(function(res) {
             console.log(res);
-            $scope.message="Saved";
+           
         });
         this.post = {};
     };

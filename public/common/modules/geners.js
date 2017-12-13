@@ -56,7 +56,7 @@ genersModule.service('Gener', function($http) {
         },
         sigledata: function(parmal) {
             console.log(parmal)
-            console.log('simer')
+            console.log('rahul')
             return $http({
                 method: 'post',
                 url: '/api/parmal_gen',

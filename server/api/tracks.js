@@ -20,6 +20,7 @@ module.exports = function(apiRouter){
 		post.rating = req.body.rating;
 		
  		post.save(function(err, post){
+
 			if(err) res.send(err);
 			console.log(post);
 				res.json(post);
@@ -58,7 +59,7 @@ console.log(post)
                 
 			post.save(function(err){
 				if(err) res.send(err);
-				res.json({ message: 'Post updated!' });
+				res.json({ message: 'Track updated!' });
 			})
 		});
 	});
@@ -68,7 +69,7 @@ console.log(post)
 			_id: req.body.id
 		}, function(err, post){
 			if(err) res.send(err);
-			res.json({ message: 'Post deleted!' });
+			res.json({ message: 'Track deleted!' });
 		})
 	});
 

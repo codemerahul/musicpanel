@@ -154,7 +154,7 @@ app.controller('CareersCtrl',function ($scope, Careers) {
         $scope.newData.phone2 = $scope.post.phone2;
         $scope.newData.email =$scope.post.email;
         $scope.newData.cover_letter = $scope.post.cover_letter;
-        console.log('simer')
+        console.log('rahul')
         Careers.add($scope.newData).then(function(res){
             console.log(res)
             $scope.success_msg = "Thanks for contacting us, We will be get back to you soon!"

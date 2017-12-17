@@ -17,8 +17,8 @@ var express = require('express'),
 
 
         aws.config.update({
-    secretAccessKey: 'X56Bws/kRhgh3DieAlQlR5d3rGk5kIal7QDRNQGQi1h',
-    accessKeyId: 'AKIAI7LghghgSYS5YVXUBOBPA'
+    secretAccessKey: '',
+    accessKeyId: ''
 });
 
 var s3 = new aws.S3({endpoint: 'https://s3.eu-central-1.amazonaws.com',
